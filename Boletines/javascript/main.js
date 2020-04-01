@@ -21,26 +21,27 @@ let links = document.querySelectorAll(".close");
 //recorrelos
 	links.forEach(function(link){
 //Agregar un evento click a cada uno de ellos
-	link.addEventListener("click",function(e){
-		e.preventDefault();
-		let content = document.querySelector(".content");
-		//Quitarle clases de animación 
-		content.classList.remove("heartBeat");
-		content.classList.remove("animated");
+		link.addEventListener("click",function(e){
+			e.preventDefault();
+			let content = document.querySelector(".content");
+			
+			//Quitarle clases de animación 
+			content.classList.remove("heartBeat");
+			content.classList.remove("animated");
 
-		//Agregar clases de animación de salida
-		content.classList.add("fadeOutUp");
-		content.classList.add("animated");
+			//Agregar clases de animación de salida
+			content.classList.add("fadeOutUp");
+			content.classList.add("animated");
 
-		//setTimeout despues de cierto tiempo una vez
-		//setInterval despues de cierto tiempo constantemente
-		setTimeout(function(){
-			location.href = "/";
-		},600);
+			//setTimeout despues de cierto tiempo una vez
+			//setInterval despues de cierto tiempo constantemente
+			setTimeout(function(){
+			location.href = "/Boletines";
+			},600);
 		
 
 
-		return false;
+			return false;
 	});
 });
 
